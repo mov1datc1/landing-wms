@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   BarChart3, ScanLine, Scissors, Package, Truck, ShieldCheck,
   ArrowRight, CheckCircle2, XCircle, Play, Zap, Clock, AlertTriangle,
-  Target, MapPin, BarChart, Eye, Layers, ChevronRight
+  Target, MapPin, Eye, Layers, ChevronRight
 } from 'lucide-react';
 
 /* ===================== NAVBAR ===================== */
@@ -334,7 +334,7 @@ function CTASection() {
       });
       if (!res.ok) throw new Error('Error al enviar');
       setSubmitted(true);
-    } catch {
+    } catch (_err) {
       setError('Hubo un error al enviar. Por favor intenta de nuevo o contáctanos por WhatsApp.');
     } finally {
       setSending(false);
